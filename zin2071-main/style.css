@@ -1,0 +1,39 @@
+h2
+{
+    color: blueviolet;
+    
+}
+body
+{
+    background-color: black;
+    margin: 0;
+}
+header
+{
+    background-color: bisque;
+}
+main 
+{
+    padding: 20px;
+    background-color: blue;
+}
+footer
+{
+    border-top: solid 4px red;
+    background-color: aquamarine;
+}
+ul,h1,h2,h3,h4,h5,h6
+{
+    margin: 0;
+}
+
+ul
+{
+    list-style:  none;
+}
+a
+{
+    text-decoration: none;
+}
+
+цвет текста меню
