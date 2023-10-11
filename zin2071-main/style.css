@@ -86,4 +86,17 @@ button
     align-content: stretch;
     justify-content: space-around;
 }
+.photostyle
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photostyle img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+
 
