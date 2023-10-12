@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+
+</head> 
+<body>
+    
+    <header>
+        <div class="wrapper">
+        <h2>
+            Веб-технологии
+        </h2>
+        <div>
+        <img src="img/licensed-image.jpg" alt="логотип" width="100">
+        </div>
+        <nav>
+            <ul>
+            
+                <li> <a href="index.html">Главная</a></li>
+            
+                <li> <a href="Rez.html">Резюме</a></li>
+            
+                <li> <a href="Comp.html">Компетенция</a></li>
+            
+                <li> <a href="Photo.html">Фото</a></li>
+
+                <li> <a href="web.html">web</a></li>
+
+                <li><a href="form.html">form</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <form action="" method="get">
+            <input type="submit" value="отправить вопрос">
+            <input type="reset" value="очистить">
+        </form>
+        <div>
+            <div>Как Вам удобно получить ответ:</div>
+            <label for="c_mail">
+            <input type="radio" name="com_tion" id="c_mail"> по почте </label>
+            <br>
+            <label for="c_tel">
+            <input type="radio" name="com_tion" id="c_tel"> по телефону
+            </label><br>
+            <label for="c_none">
+            <input type="radio" name="com_tion" id="c_none"> не нужно отвечать
+            </label><br>
+        </div>
+         <div>
+            <div> И еще один вопрос?</div>
+            <label for="chb1">
+            <input type="checkbox" name="chb1" id="chb1">может так
+            </label><br>
+            <label for="chb2">
+            <input type="checkbox" name="chb2" id="chb2">или не так
+            </label><br>
+            <label for="chb2">
+            <input type="checkbox" name="chb3" id="chb3">иначе
+        </label><br></div>
+        <div>
+            <label for="theme">
+            Укажите тему вопроса
+            </label><br>
+            <select name="theme" id="theme">
+            <option value="work">работа</option>
+            <option value="cooperation">сотрудничество</option>
+            <option value="personal">личное</option>
+            </select>
+        </div>
+        <div><label for="example">Пример текстового поля</label><br>
+            <input type="text"name="example"id="example"size="30"pattern="[A-Z]+"required>
+            </div>
+            <div>
+            <label for="email">адрес почты</label>
+            <input type="email" name="email" id="email">
+            </div>
+            <div>
+            <label for="tel">номер телефона</label>
+            <input type="tel" name="tel" id="tel">
+            </div>
+            <div>Ваш вопрос:</div>
+            <div>
+            <textarea cols="20"></textarea>
+        </div>   
+    </main>
+    <footer>
+        <div class="wrapper footer_flex">
+        <h6>2071, Завьялов И.Н.</h6>
+        <div>
+            <a href="https://m.vk.com/"><img src="img/VK_Compact_Logo.svg.png" alt="" width="50"> </a>
+            <a href="t.me"><img src="img/images.png" alt="" width="50"> </a>
+            <a href="https://github.com/1Lunacs"><img src="img/github_logo.png" alt="" width="50"> </a>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
