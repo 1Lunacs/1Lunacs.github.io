@@ -98,5 +98,20 @@ button
     object-fit: cover;
     margin: 10px;
 }
+.form_flex
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+}
+.name
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 
