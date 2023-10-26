@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        //alert("Head");
+        //console.log("Head");
+        function setColor()
+        {
+            document.getElementById("title_h2").style.backgroundColor="red";
+        }
+    </script>
     
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -9,10 +17,15 @@
 
 </head> 
 <body>
+    <script>
+        //alert("Начало");
+        //console.log("Начало");
+    </script>
     
-    <header>
+    <header >
         <div class="wrapper">
-        <h2>
+        <h2 id="title_h2" onclick="setColor()">
+            
             Веб-технологии
         </h2>
         <div>
@@ -105,7 +118,7 @@
             <br>
             <div>Ваш вопрос:</div>
             <div>
-            <textarea cols="20"></textarea>
+            <textarea id="area" cols="20"></textarea>
             </div> 
             <form action="" method="get">
             <input type="submit" value="отправить вопрос">
@@ -123,6 +136,11 @@
         </div>
     </div>
     </footer>
+    //<script>
+       // alert("Конец");
+       // console.log("Конец");
+       // document.getElementById("title_h2").innerText = "Привет";
+    //</script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

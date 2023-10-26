@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        function setsyze100()
+        {
+            document.getElementById("photosyze").style.width="100px";
+        }
+        function setsyze200()
+        {
+            document.getElementById("photosyze").style.width="200px";
+        }
+        function setsyze300()
+        {
+            document.getElementById("photosyze").style.width="300px";
+        }
+    </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +54,7 @@
         <h1>Фото</h1>
         <div class="photostyle">
             <div class="photo-item">
-                <img src="img/obez1.jpg" alt="логотип" width="200" height="200">
+                <img src="img/obez1.jpg" alt="логотип" width="200" height="200" id="photosyze">
                 <p class="name">Виталий</p>
             </div>
             <div class="photo-item">
@@ -61,6 +75,9 @@
             </div>
         </div>
     </div>
+    <button onclick="setsyze100()" >100px</button>
+    <button onclick="setsyze200()">200px </button>
+    <button onclick="setsyze300()">300px</button>
     </main>
     <footer>
         <div class="wrapper footer_flex">
