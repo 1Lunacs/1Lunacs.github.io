@@ -38,6 +38,7 @@
     </header>
     <main>
     <div class="form_flex">
+        <br>
         <div>
             <div>Как Вам удобно получить ответ:</div>
             <label for="c_mail">
@@ -50,17 +51,7 @@
             <input type="radio" name="com_tion" id="c_none"> не нужно отвечать
             </label><br>
         </div>
-         <div>
-            <div> И еще один вопрос?</div>
-            <label for="chb1">
-            <input type="checkbox" name="chb1" id="chb1">может так
-            </label><br>
-            <label for="chb2">
-            <input type="checkbox" name="chb2" id="chb2">или не так
-            </label><br>
-            <label for="chb2">
-            <input type="checkbox" name="chb3" id="chb3">иначе
-        </label><br></div>
+        <br>
         <div>
             <label for="theme">
             Укажите тему вопроса
@@ -71,25 +62,55 @@
             <option value="personal">личное</option>
             </select>
         </div>
-        <div><label for="example">Пример текстового поля</label><br>
-            <input type="text"name="example"id="example"size="30"pattern="[A-Z]+"required>
-            </div>
+        <br>
             <div>
-            <label for="email">адрес почты</label>
-            <input type="email" name="email" id="email">
+            <div> И еще один вопрос?</div>
+            <label for="chb1">
+            <input type="checkbox" name="chb1" id="chb1">может так
+            </label><br>
+            <label for="chb2">
+            <input type="checkbox" name="chb2" id="chb2">или не так
+            </label><br>
+            <label for="chb2">
+            <input type="checkbox" name="chb3" id="chb3">иначе
+            </label><br></div>
+            <div style="display: flex;">
+                <div style="flex: 1;">
+                    <br>
+                    <label for="example">Ваше Имя</label>
+                    
+                    <div>
+                        <br>
+                        <label for="email">адрес почты</label>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tel">номер телефона</label>
+                    </div>
+                    <br>
+                </div>
+                <div style="flex: 1;">
+                    <br>
+                    <input type="text" name="example" id="example">
+                    <div>
+                        <br>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="tel" name="tel" id="tel">
+                    </div>
+                </div>
             </div>
-            <div>
-            <label for="tel">номер телефона</label>
-            <input type="tel" name="tel" id="tel">
-            </div>
+            <br>
             <div>Ваш вопрос:</div>
             <div>
             <textarea cols="20"></textarea>
-        </div> 
-        <form action="" method="get">
+            </div> 
+            <form action="" method="get">
             <input type="submit" value="отправить вопрос">
             <input type="reset" value="очистить">
-        </form>
+            </form>
     </div>  
     </main>
     <footer>
@@ -102,5 +123,6 @@
         </div>
     </div>
     </footer>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
