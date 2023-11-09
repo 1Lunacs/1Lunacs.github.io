@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <script>
-        function setsyze100()
+        function setsize100()
         {
-            document.getElementById("photosyze").style.width="100px";
+            document.getElementById("obezphoto").style.width="100px";
         }
-        function setsyze200()
+        function setsize200()
         {
-            document.getElementById("photosyze").style.width="200px";
+            document.getElementById("obezphoto").style.width="200px";
         }
-        function setsyze300()
+        function setsize300()
         {
-            document.getElementById("photosyze").style.width="300px";
+            document.getElementById("obezphoto").style.width="300px";
         }
     </script>
     <meta charset="UTF-8">
@@ -43,6 +43,8 @@
                 <li> <a href="web.html">web</a></li>
 
                 <li><a href="form.html">form</a></li>
+
+                <li><a href="div.html">div</a></li>
             </ul>
         </nav>
         </div>
@@ -54,8 +56,8 @@
         <h1>Фото</h1>
         <div class="photostyle">
             <div class="photo-item">
-                <img src="img/obez1.jpg" alt="логотип" width="200" height="200" id="photosyze">
-                <p class="name">Виталий</p>
+                <img src="img/obez1.jpg" alt="логотип" width="200" height="200" id="obezphoto">
+                <p id photo_name>Виталий</p>
             </div>
             <div class="photo-item">
                 <img src="img/obez2.jpg" alt="логотип" width="200" height="200">
@@ -75,9 +77,25 @@
             </div>
         </div>
     </div>
-    <button onclick="setsyze100()" >100px</button>
-    <button onclick="setsyze200()">200px </button>
-    <button onclick="setsyze300()">300px</button>
+    <div>
+        <div>Выберете размер изображения</div>
+        <label for="100px">
+        <input type="radio" name="photosize" id="100px" value="100px"> 100px 
+        </label>
+        <br>
+        <label for="200px">
+        <input type="radio" name="photosize" id="200px" value="200px"> 200px
+        </label><br>
+        <label for="300px">
+        <input type="radio" name="photosize" id="300px" value="300px"> 300px
+        </label><br>
+        <div>
+            <label for="textforpicture">напишите текст</label>
+            <input type="text" name="login" id="textforpicture">
+        </div>
+        <button onclick="Picturesize()">отправить данные</button>
+
+    </div>
     </main>
     <footer>
         <div class="wrapper footer_flex">
@@ -89,5 +107,21 @@
         </div>
         </div>
     </footer>
+    <script>
+        function Picturesize()
+            {
+               let af = document.forms[0].textforpicture.value;
+               let photosize = document.forms[0].photosize;
+                    for (i=0; i<photosize.width; i++)
+                    {
+                        if (photosize[i].checked)
+                        {
+                            document.getElementById("obezphoto").style.width = photosize[i].value;
+                        }
+                    }
+                    document.getElementById("textforpicture").innerHTML = af;
+            }
+        
+    </script>
 </body>
 </html>

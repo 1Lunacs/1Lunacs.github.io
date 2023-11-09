@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h2>
+                Веб-технологии
+            </h2>
+            <div>
+                <img src="img/licensed-image.jpg" alt="логотип" width="100">
+            </div>
+            <nav>
+                <ul>
+                    <li> <a href="index.html">Главная</a></li>
+                    <li> <a href="Rez.html">Резюме</a></li>
+                    <li> <a href="Comp.html">Компетенция</a></li>
+                    <li> <a href="Photo.html">Фото</a></li>
+                    <li> <a href="web.html">web</a></li>
+                    <li><a href="form.html">form</a></li>
+                    <li><a href="div.html">div</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <input type="text" id="inputText">
+        <button onclick="createDiv()">Создать div</button>
+    </div>
+    
+
+    <script>
+        function createDiv() {
+            var inputText = document.getElementById('inputText').value;
+            var newDiv = document.createElement('div');
+            newDiv.innerHTML = inputText + ' <button onclick="removeDiv(this)">Удалить</button>';
+            document.body.appendChild(newDiv);
+        }
+
+        function removeDiv(element) {
+            var divToRemove = element.parentNode;
+            document.body.removeChild(divToRemove);
+        }
+    </script>
+</body>
+</html>

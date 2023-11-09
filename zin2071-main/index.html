@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <style>
-        h2
-        {
-         color: aqua;
-         font-size: large;
-        }
-    </style>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 1</title>
-    
 </head>
-<body>
-    
+<body class="light-mode">
     <header>
         <div class="wrapper">
-        <h2>
-            Веб-технологии
-        </h2>
-        <div>
-        <img src="img/licensed-image.jpg" alt="логотип" width="100">
-        </div>
-        <nav>
-            <ul>
-                
-            
-                <li> <a href="index.html">Главная</a></li>
-            
-                <li> <a href="Rez.html">Резюме</a></li>
-            
-                <li> <a href="Comp.html">Компетенция</a></li>
-            
-                <li> <a href="Photo.html">Фото</a></li>
-
-                <li> <a href="web.html">web</a></li>
-
-                <li><a href="form.html">form</a></li>
-            </ul>
-        </nav>
+            <h2>Веб-технологии</h2>
+            <div>
+                <img src="img/licensed-image.jpg" alt="логотип" width="100">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="Rez.html">Резюме</a></li>
+                    <li><a href="Comp.html">Компетенция</a></li>
+                    <li><a href="Photo.html">Фото</a></li>
+                    <li><a href="web.html">Web</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="div.html">div</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     
-    <main>
+    <main class="index_main">
         <div class="wrapper index-main-flex">
-        <h1>Добро пожаловать на мою страницу</h1>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem deserunt reiciendis eos molestiae aperiam dignissimos eius at minus totam, autem rerum quam sed ad similique maiores mollitia blanditiis quae adipisci?
-        <button>Кнопка</button>
-    </div>
+            <h1>Добро пожаловать на мою страницу</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem deserunt reiciendis eos molestiae aperiam dignissimos eius at minus totam, autem rerum quam sed ad similique maiores mollitia blanditiis quae adipisci?
+            <div class="theme-buttons">
+                <button id="lightModeButton">Светлая</button>
+                <button id="darkModeButton">Тёмная</button>
+            </div>
+        </div>
     </main>
     
     <footer>
         <div class="wrapper footer_flex">
-        <h6>2071, Завьялов И.Н.</h6>
-        <div>
-            <a href="https://m.vk.com/"><img src="img/VK_Compact_Logo.svg.png" alt="" width="50"> </a>
-            <a href="t.me"><img src="img/images.png" alt="" width="50"> </a>
-            <a href="https://github.com/1Lunacs"><img src="img/github_logo.png" alt="" width="50"> </a>
-        </div>
+            <h6>2071, Завьялов И.Н.</h6>
+            <div>
+                <a href="https://m.vk.com/"><img src="img/VK_Compact_Logo.svg.png" alt="" width="50"></a>
+                <a href="t.me"><img src="img/images.png" alt="" width="50"></a>
+                <a href="https://github.com/1Lunacs"><img src="img/github_logo.png" alt="" width="50"></a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const lightModeButton = document.getElementById('lightModeButton');
+        const darkModeButton = document.getElementById('darkModeButton');
+        const body = document.body;
+        const main = document.querySelector('.index_main');
+
+        lightModeButton.addEventListener('click', () => {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            main.classList.remove('dark-mode');
+            main.classList.add('light-mode');
+        });
+
+        darkModeButton.addEventListener('click', () => {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            main.classList.remove('light-mode');
+            main.classList.add('dark-mode');
+        });
+    </script>
 </body>
 </html>

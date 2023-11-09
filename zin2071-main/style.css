@@ -129,5 +129,29 @@ select
     border-radius: 5px;
     background-color: rgb(248, 142, 3);
 }
+h2 {
+    color: aqua;
+    font-size: large;
+}
+body.light-mode {
+    background-color: blanchedalmond;
+    color: #333;
+}
+body.dark-mode {
+    background-color: #333;
+    color: #f8f8f8;
+}
+.index_main.light-mode {
+    background-color: blanchedalmond;
+}
+.index_main.dark-mode {
+    background-color: #333;
+}
+.theme-buttons {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 

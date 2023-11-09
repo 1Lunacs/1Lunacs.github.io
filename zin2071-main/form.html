@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        //alert("Head");
-        //console.log("Head");
-        function setColor()
-        {
-            document.getElementById("title_h2").style.backgroundColor="red";
-        }
-    </script>
-    
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +8,6 @@
 
 </head> 
 <body>
-    <script>
-        //alert("Начало");
-        //console.log("Начало");
-    </script>
-    
     <header >
         <div class="wrapper">
         <h2 id="title_h2" onclick="setColor()">
@@ -45,23 +31,29 @@
                 <li> <a href="web.html">web</a></li>
 
                 <li><a href="form.html">form</a></li>
+                
+                <li><a href="div.html">div</a></li>
             </ul>
         </nav>
     </div>
     </header>
     <main>
+        <h3 id="textFromForm">
+
+        </h3>
     <div class="form_flex">
+        <form action="" method="get">
         <br>
         <div>
             <div>Как Вам удобно получить ответ:</div>
             <label for="c_mail">
-            <input type="radio" name="com_tion" id="c_mail"> по почте </label>
+            <input type="radio" name="com_tion" id="c_mail" value="по почте"> по почте </label>
             <br>
             <label for="c_tel">
-            <input type="radio" name="com_tion" id="c_tel"> по телефону
+            <input type="radio" name="com_tion" id="c_tel" value="по телефону"> по телефону
             </label><br>
             <label for="c_none">
-            <input type="radio" name="com_tion" id="c_none"> не нужно отвечать
+            <input type="radio" name="com_tion" id="c_none" value="не нужно отвечать"> не нужно отвечать
             </label><br>
         </div>
         <br>
@@ -90,7 +82,7 @@
             <div style="display: flex;">
                 <div style="flex: 1;">
                     <br>
-                    <label for="example">Ваше Имя</label>
+                    <label for="login">Ваше Имя</label>
                     
                     <div>
                         <br>
@@ -104,14 +96,14 @@
                 </div>
                 <div style="flex: 1;">
                     <br>
-                    <input type="text" name="example" id="example">
+                    <input type="text" name="login" id="login">
                     <div>
                         <br>
-                        <input type="email" name="email" id="email">
+                        <input type="text" name="email" id="email">
                     </div>
                     <br>
                     <div>
-                        <input type="tel" name="tel" id="tel">
+                        <input type="text" name="tel" id="tel">
                     </div>
                 </div>
             </div>
@@ -120,10 +112,11 @@
             <div>
             <textarea id="area" cols="20"></textarea>
             </div> 
-            <form action="" method="get">
+            
             <input type="submit" value="отправить вопрос">
             <input type="reset" value="очистить">
             </form>
+            <button onclick="exampleTestForm()">отправить данные</button>
     </div>  
     </main>
     <footer>
@@ -136,11 +129,25 @@
         </div>
     </div>
     </footer>
-    //<script>
-       // alert("Конец");
-       // console.log("Конец");
-       // document.getElementById("title_h2").innerText = "Привет";
-    //</script>
-    <script type="text/javascript" src="script.js"></script>
+    <script>
+        function exampleTestForm()
+        {
+            let a=document.forms[0].login.value;
+            let b=document.getElementById("login").value;
+            console.log("все работает!" + ",b="+b);
+            let str = ("все работает!" +a + "<br>");
+            let com_tion = document.forms[0].com_tion;
+            for (i=0; i<com_tion.length;i++)
+            {
+                if (com_tion[i].checked)
+                {   
+                    console.log(com_tion[i].value);
+                    str =str + com_tion[i].value;
+                }
+                document.getElementById("textFromForm").innerHTML = str;
+            }
+        }
+    </script>
+   
 </body>
 </html>
